@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Areeba Umar — Computer Science student at the University of Kamalia.">
+<title>Areeba Umar | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#4a0e2e;--wine2:#6b1a44;--gold:#c9a227;--gold2:#e9d08a;--ivory:#fbf6ec;--card:#fffdf8;--ink:#2a1220;--muted:#6f5a64;--line:#eadfce;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Nunito Sans',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 15px/1.7 var(--sans)}
+a{color:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:#fbf6ece8;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:1100px;margin:auto;height:70px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 24px var(--serif);color:var(--wine);text-decoration:none;letter-spacing:.02em}.logo b{color:var(--gold)}
+nav{display:flex;gap:28px}nav a{text-decoration:none;font-size:13px;font-weight:600;color:var(--muted)}nav a:hover{color:var(--wine)}
+#menu{display:none;background:none;border:0;font-size:24px;color:var(--wine)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;padding:84px 0 90px}
+.tag{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font:700 clamp(46px,7vw,84px)/1 var(--serif);color:var(--wine);margin:14px 0 18px}
+.hero h1 span{display:block;background:linear-gradient(100deg,var(--gold),#a67c00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:480px;margin:0 0 28px}
+.btn{display:inline-block;padding:12px 24px;border-radius:6px;font-weight:700;font-size:13px;text-decoration:none;margin:0 10px 10px 0}
+.b1{background:var(--wine);color:var(--gold2)}.b1:hover{background:var(--wine2)}
+.b2{border:1.5px solid var(--wine);color:var(--wine)}.b2:hover{background:var(--wine);color:var(--gold2)}
+.crest{background:linear-gradient(160deg,var(--wine),#2d0820);color:#fff;border-radius:18px;padding:34px 30px;border:2px solid var(--gold);box-shadow:10px 10px 0 var(--gold2)}
+.mono{width:76px;height:76px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font:700 30px var(--serif);color:var(--gold2);margin-bottom:20px}
+.crest h3{font:700 26px var(--serif);margin:0 0 4px}.crest small{color:var(--gold2)}
+.facts{list-style:none;margin:22px 0 0;padding:0}
+.facts li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid #ffffff22;font-size:13px;color:#e9dce2}
+.facts li b{color:var(--gold2);font-weight:600;text-align:right}
+section{padding:78px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+h2{font:700 clamp(32px,4vw,46px)/1.1 var(--serif);color:var(--wine);margin:6px 0 30px}
+.about p{max-width:720px;font-size:17px;color:var(--ink)}
+.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 14px 34px #4a0e2e1c}
+.score{font:700 40px/1 var(--serif);color:var(--wine);margin:10px 0 4px}.score span{font-size:20px;color:var(--gold)}
+.card h3{font:700 22px var(--serif);color:var(--wine);margin:0 0 6px}
+.card .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.card p{color:var(--muted);font-size:13px;margin:0}
+.skill{display:flex;align-items:center;gap:14px;padding:18px 20px}
+.skill i{flex:none;width:36px;height:36px;border-radius:50%;background:var(--wine);color:var(--gold2);display:grid;place-items:center;font:700 14px var(--serif);font-style:normal}
+.skill span{font-weight:600;font-size:14px}
+.proj{display:flex;flex-direction:column}
+.proj.big{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:34px;background:linear-gradient(160deg,var(--wine),#2d0820);border-color:var(--gold)}
+.proj.big h3{color:#fff;font-size:30px}.proj.big p,.proj.big li{color:#e9dce2}.proj.big .k{color:var(--gold2)}
+.proj ul{margin:0 0 16px;padding:0;list-style:none}
+.proj li{padding:7px 0 7px 22px;position:relative;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+.proj.big li{border-color:#ffffff22}
+.proj li:before{content:"◆";position:absolute;left:0;top:8px;font-size:9px;color:var(--gold)}
+.role{display:inline-block;background:var(--gold);color:var(--wine);font-size:12px;font-weight:700;padding:5px 13px;border-radius:99px;margin-top:6px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.tags span{background:#f4ead6;color:var(--wine);font-size:11px;font-weight:700;padding:4px 10px;border-radius:5px}
+.link{font-size:12px;font-weight:700;color:var(--wine2);text-decoration:none;margin-top:auto}.link:hover{color:var(--gold)}
+.contact{background:var(--wine);color:#fff;border-top:4px solid var(--gold);text-align:center}
+.contact h2{color:#fff}.contact p{color:#e9dce2;max-width:460px;margin:0 auto 28px}
+.cl{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cl a{border:1px solid var(--gold);color:var(--gold2);padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;word-break:break-all}
+.cl a:hover{background:var(--gold);color:var(--wine)}
+footer{background:#2d0820;color:#b99aa9;text-align:center;font-size:12px;padding:20px}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:40px;padding:60px 0}.g3{grid-template-columns:repeat(2,1fr)}.proj.big{grid-template-columns:1fr;gap:10px}}
+@media(max-width:600px){#menu{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--ivory);flex-direction:column;gap:16px;padding:20px 24px;border-bottom:1px solid var(--line)}nav.open{display:flex}.g3,.g2{grid-template-columns:1fr}section{padding:60px 0}.crest{box-shadow:6px 6px 0 var(--gold2)}}
+</style>
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="#home">Areeba<b>.</b></a>
+<button id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+<nav id="nav"><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav></div></header>
+
+<main>
+<div class="wrap hero" id="home">
+  <div>
+    <div class="tag">Computer Science Student</div>
+    <h1>Areeba <span>Umar</span></h1>
+    <p>Interested in technology, Artificial Intelligence, Data Science and innovative software solutions that solve real-world problems.</p>
+    <a class="btn b1" href="#projects">View my projects</a><a class="btn b2" href="#contact">Contact me</a>
+  </div>
+  <aside class="crest">
+    <div class="mono">AU</div>
+    <h3>Areeba Umar</h3><small>BS Computer Science</small>
+    <ul class="facts"><li>University <b>University of Kamalia</b></li><li>Interests <b>AI · Data Science</b></li><li>Email <b>areebaumar43@gmail.com</b></li></ul>
+  </aside>
+</div>
+
+<section id="about"><div class="wrap about">
+  <div class="eyebrow">Introduction</div><h2>About me</h2>
+  <p>I am Areeba Umar, a Computer Science student at the University of Kamalia. I have a strong interest in technology, Artificial Intelligence, Data Science, and innovative software solutions. I enjoy learning new technologies and working on practical projects that solve real-world problems.</p>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <div class="eyebrow">Academic background</div><h2>Education</h2>
+  <div class="grid g3">
+    <div class="card"><div class="k">Currently studying</div><h3>BS Computer Science</h3><p>University of Kamalia</p></div>
+    <div class="card"><div class="k">Intermediate</div><h3>FSc</h3><div class="score">989<span> / 1200</span></div><p>Marks obtained</p></div>
+    <div class="card"><div class="k">Secondary</div><h3>Matriculation</h3><div class="score">1050<span> / 1100</span></div><p>Marks obtained</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="eyebrow">What I can do</div><h2>Technical skills</h2>
+  <div class="grid g3">
+    <div class="card skill"><i>◈</i><span>Data Collection</span></div>
+    <div class="card skill"><i>◎</i><span>Basic Data Analysis</span></div>
+    <div class="card skill"><i>W</i><span>Microsoft Word</span></div>
+    <div class="card skill"><i>X</i><span>Microsoft Excel</span></div>
+    <div class="card skill"><i>✦</i><span>Research &amp; Documentation</span></div>
+    <div class="card skill"><i>❖</i><span>Problem Solving</span></div>
+    <div class="card skill"><i>Ca</i><span>Canva</span></div>
+    <div class="card skill"><i>✎</i><span>Graphic Designing (Basic)</span></div>
+    <div class="card skill"><i>▣</i><span>Presentation Designing</span></div>
+  </div>
+</div></section>
+
+<section id="interests"><div class="wrap">
+  <div class="eyebrow">What draws me in</div><h2>Areas of interest</h2>
+  <div class="grid g3">
+    <div class="card skill"><i>⌁</i><span>Cyber Security</span></div>
+    <div class="card skill"><i>✧</i><span>Digital Creativity</span></div>
+    <div class="card skill"><i>✎</i><span>Graphic Designing</span></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="eyebrow">My work</div><h2>Projects</h2>
+  <div class="grid g2">
+    <article class="card proj big">
+      <div><div class="k">Project 01</div><h3>SafeHer AI</h3>
+        <p>An AI-based women safety project designed to improve personal security through smart technology.</p>
+        <span class="role">My role: Data Collection</span></div>
+      <ul><li>One-Tap SOS Alert</li><li>Live Location Sharing</li><li>Trusted Contacts Notifications</li><li>EmpowerHer AI — an AI that only talks about women empowerment</li></ul>
+    </article>
+    <article class="card proj"><div class="k">Project 02</div><h3>QR Code Attendance System</h3>
+      <p>A digital attendance management system that uses QR code technology to make attendance recording easier and more efficient.</p>
+      <ul><li>QR Code Scanning</li><li>Digital Attendance Recording</li><li>Student Attendance Management</li></ul>
+      <div class="tags"><span>C++</span><span>OOP</span><span>Vectors</span></div>
+      <a class="link" href="projects/qr-attendance-system/QRBasedAttendanceSystem.cpp" target="_blank" rel="noreferrer">View source code ↗</a></article>
+    <article class="card proj"><div class="k">Project 03</div><h3>Complaint Management System</h3>
+      <p>A menu-driven console application to add, view, search, resolve and delete complaints, built with OOP concepts such as inheritance, polymorphism, function overloading and friend functions.</p>
+      <div class="tags"><span>C++</span><span>OOP</span><span>Inheritance</span></div>
+      <a class="link" href="projects/complaint-management-system/ComplaintManagementSystem.cpp" target="_blank" rel="noreferrer">View source code ↗</a></article>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="eyebrow">Contact</div><h2>Let's connect</h2>
+  <p>Feel free to reach out by email or phone.</p>
+  <div class="cl"><a href="mailto:areebaumar43@gmail.com">areebaumar43@gmail.com</a><a href="tel:03130046084">0313-0046084</a></div>
+</div></section>
+</main>
+<footer>© <span id="y"></span> Areeba Umar · University of Kamalia</footer>
+<script>
+const m=document.getElementById("menu"),n=document.getElementById("nav");
+m.onclick=()=>m.setAttribute("aria-expanded",String(n.classList.toggle("open")));
+n.querySelectorAll("a").forEach(a=>a.onclick=()=>{n.classList.remove("open");m.setAttribute("aria-expanded","false")});
+document.getElementById("y").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
